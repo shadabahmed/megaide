@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MegaIDE</name>
+    </assembly>
+    <members>
+        <member name="T:MegaIDE.ExitDialog">
+            <summary>
+            Summary description for ExitSaveDialog.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ExitDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.Library">
+            <summary>
+            Summary description for Library.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.MainClass">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainClass.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.MainForm">
+            <summary>
+            Summary description for MainForm.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.NewDocumentForm">
+            <summary>
+            Summary description for NewDocumentForm.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectSettings.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectSettings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.RecentDocuments">
+            <summary>
+            Summary description for RecentFiles.
+            </summary>
+            
+        </member>
+    </members>
+</doc>

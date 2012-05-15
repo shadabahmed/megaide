@@ -1,0 +1,1755 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MegaIDE</name>
+    </assembly>
+    <members>
+        <member name="T:MegaIDE.NewDocumentDialogClass">
+            <summary>
+            This form shows the new document dialog.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.#ctor">
+            <summary>
+            New Document Dialog Class Contructor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.ShowAddFileProjectDialog(System.Windows.Forms.IWin32Window,System.String)">
+            <summary>
+            Shows "Add files to a project" dialog box. 
+            </summary>
+            <param name="parent">
+            Parent form.
+            </param>
+            <param name="projectFolder">
+            Path of the project folder.
+            </param>
+            <returns>
+            Dialog result as DialogResult.OK or DialogResult.Cancel . 
+            </returns>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.ShowNewProjectDialog(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Shows "New Project" dialog box.
+            </summary>
+            <param name="parent">
+            Parent form.
+            </param>
+            <returns>
+            Dialog result as DialogResult.OK or DialogResult.Cancel .
+            </returns>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.ShowNewFileDialog(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Shows "New File" dialog box.
+            </summary>
+            <param name="parent">
+            Parent form.
+            </param>
+            <returns>
+            Dialog result as DialogResult.OK or DialogResult.Cancel .
+            </returns>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.NewDocumentDialogClass.categoryTree_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            To be reviewed later
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:MegaIDE.NewDocumentDialogClass.NewDocumentDialog">
+            <summary>
+            Singleton implementation static variable for New Document Dialog.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.NewDocumentDialogClass.ProjectType">
+            <summary>
+            Gets the project type for the new project selected.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.NewDocumentDialogClass.DialogMode">
+            <summary>
+            Gets or Sets the dialog mode.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.NewDocumentDialogClass.FullFileName">
+            <summary>
+            Gets the fully qualified filename of the new document file.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.NewDocumentDialogClass.FileName">
+            <summary>
+            Gets the filename of the new document created.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.NewDocumentDialogClass.DialogModes">
+            <summary>
+            Dialog Modes Enumeration .
+            </summary>
+        </member>
+        <member name="F:MegaIDE.NewDocumentDialogClass.DialogModes.NewFileMode">
+            <summary>
+            Mode for new file dialog .
+            </summary>
+        </member>
+        <member name="F:MegaIDE.NewDocumentDialogClass.DialogModes.AddFileMode">
+            <summary>
+            Mode for add file to project .
+            </summary>
+        </member>
+        <member name="F:MegaIDE.NewDocumentDialogClass.DialogModes.NewProjectMode">
+            <summary>
+            Mode for new project .
+            </summary>
+        </member>
+        <member name="F:MegaIDE.NewDocumentDialogClass.DialogModes.None">
+            <summary>
+            Null for initializer .
+            </summary>
+        </member>
+        <member name="T:MegaIDE.RichTextBoxEx">
+            <summary>
+            Class used for output box.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.#ctor">
+            <summary>
+            Contructor
+            </summary>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.InsertLink(System.String)">
+            <summary>
+            Insert a given text as a link into the RichTextBox at the current insert position.
+            </summary>
+            <param name="text">Text to be inserted</param>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.InsertLink(System.String,System.Int32)">
+            <summary>
+            Insert a given text at a given position as a link. 
+            </summary>
+            <param name="text">Text to be inserted</param>
+            <param name="position">Insert position</param>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.InsertLink(System.String,System.String)">
+            <summary>
+            Insert a given text at at the current input position as a link.
+            The link text is followed by a hash (#) and the given hyperlink text, both of
+            them invisible.
+            When clicked on, the whole link text and hyperlink string are given in the
+            LinkClickedEventArgs.
+            </summary>
+            <param name="text">Text to be inserted</param>
+            <param name="hyperlink">Invisible hyperlink string to be inserted</param>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.InsertLink(System.String,System.String,System.Int32)">
+            <summary>
+            Insert a given text at a given position as a link. The link text is followed by
+            a hash (#) and the given hyperlink text, both of them invisible.
+            When clicked on, the whole link text and hyperlink string are given in the
+            LinkClickedEventArgs.
+            </summary>
+            <param name="text">Text to be inserted</param>
+            <param name="hyperlink">Invisible hyperlink string to be inserted</param>
+            <param name="position">Insert position</param>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.SetSelectionLink(System.Boolean)">
+            <summary>
+            Set the current selection's link style
+            </summary>
+            <param name="link">true: set link style, false: clear link style</param>
+        </member>
+        <member name="M:MegaIDE.RichTextBoxEx.GetSelectionLink">
+            <summary>
+            Get the link style for the current selection
+            </summary>
+            <returns>0: link style not set, 1: link style set, -1: mixed</returns>
+        </member>
+        <member name="P:MegaIDE.RichTextBoxEx.DetectUrls">
+            <summary>
+            Gets or Sets the detect url capability.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ErrorListView">
+            <summary>
+            Summary description for ListViewEx.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ErrorListView.#ctor">
+            <summary>
+            Constructor for derived class.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ErrorListView.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Overriding this method to go to paint event and fix column size.
+            </summary>
+            <param name="m">
+            Message sent to the control.
+            </param>
+        </member>
+        <member name="T:MegaIDE.ListViewTextSort">
+            <summary>
+            Provides text sorting (case sensitive)
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ListViewTextSort.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="sortColumn">Column to be sorted</param>
+            <param name="ascending">true, if ascending order, false otherwise</param>
+        </member>
+        <member name="M:MegaIDE.ListViewTextSort.Compare(System.Object,System.Object)">
+            <summary>
+            Implementation of IComparer.Compare
+            </summary>
+            <param name="lhs">First Object to compare</param>
+            <param name="rhs">Second Object to compare</param>
+            <returns>Less that zero if lhs is less than rhs. Greater than zero if lhs greater that rhs. Zero if they are equal</returns>
+        </member>
+        <member name="M:MegaIDE.ListViewTextSort.OnCompare(System.String,System.String)">
+            <summary>
+            Overridden to do type-specific comparision.
+            </summary>
+            <param name="lhs">First Object to compare</param>
+            <param name="rhs">Second Object to compare</param>
+            <returns>Less that zero if lhs is less than rhs. Greater than zero if lhs greater that rhs. Zero if they are equal</returns>
+        </member>
+        <member name="T:MegaIDE.ListViewTextCaseInsensitiveSort">
+            <summary>
+            Provides text sorting (case insensitive)
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ListViewTextCaseInsensitiveSort.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="sortColumn">Column to be sorted</param>
+            <param name="ascending">true, if ascending order, false otherwise</param>
+        </member>
+        <member name="M:MegaIDE.ListViewTextCaseInsensitiveSort.OnCompare(System.String,System.String)">
+            <summary>
+            Case-insensitive compare
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ListViewInt32Sort">
+            <summary>
+            Provides integer (32 bits) sorting
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ListViewInt32Sort.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="sortColumn">Column to be sorted</param>
+            <param name="ascending">true, if ascending order, false otherwise</param>
+        </member>
+        <member name="M:MegaIDE.ListViewInt32Sort.OnCompare(System.String,System.String)">
+            <summary>
+            Integer compare
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ListViewSortManager">
+            <summary>
+            Provides sorting of ListView columns 
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.#ctor(System.Windows.Forms.ListView,System.Type[],System.Int32,System.Windows.Forms.SortOrder)">
+            <summary>
+            Creates the ListView Sort Manager
+            </summary>
+            <param name="list">ListView that this manager will provide sorting to</param>
+            <param name="comparers">Array of Types of comparers (One for each column)</param>
+            <param name="column">Initial column to sort</param>
+            <param name="order">Initial sort order</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.#ctor(System.Windows.Forms.ListView,System.Type[])">
+            <summary>
+            Creates the ListView Sort Manager
+            </summary>
+            <param name="list">ListView that this manager will provide sorting to</param>
+            <param name="comparers">Array of Types of comparers (One for each column)</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.GetColumnComparerType(System.Int32)">
+            <summary>
+            Returns the type of the comparer for the given column
+            </summary>
+            <param name="column">Column index</param>
+            <returns></returns>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.SetColumnComparerType(System.Int32,System.Type)">
+            <summary>
+            Sets the type of the comparer for the given column
+            </summary>
+            <param name="column">Column index</param>
+            <param name="comparerType">Comparer type</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.SetComparerTypes(System.Type[])">
+            <summary>
+            Reassigns the comparer types for all the columns
+            </summary>
+            <param name="comparers">Array of Types of comparers (One for each column)</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.Sort(System.Int32)">
+            <summary>
+            Sorts the rows based on the given column and the current sort order
+            </summary>
+            <param name="column">Column to be sorted</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.Sort(System.Int32,System.Windows.Forms.SortOrder)">
+            <summary>
+            Sorts the rows based on the given column and sort order
+            </summary>
+            <param name="column">Column to be sorted</param>
+            <param name="order">Sort order</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.ColumnClick(System.Object,System.Windows.Forms.ColumnClickEventArgs)">
+            <summary>
+            ColumnClick event handler
+            </summary>
+            <param name="sender">Event sender</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:MegaIDE.ListViewSortManager.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            Import for geting process address.
+            </summary>
+            <param name="hModule"></param>
+            <param name="procName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MegaIDE.ListViewSortManager.Column">
+            <summary>
+            Returns the current sort column
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ListViewSortManager.SortOrder">
+            <summary>
+            Returns the current sort order
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ListViewSortManager.SortEnabled">
+            
+            Enables/Disables list sorting
+            
+        </member>
+        <member name="T:MegaIDE.AboutDialogClass">
+            <summary>
+            Summary description for AboutBox.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.AboutDialogClass.#ctor">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.AboutDialogClass.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.AboutDialogClass.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.AboutDialogClass.AboutDialog">
+            <summary>
+            Singleton implementation property.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ProjectTypes">
+            <summary>
+            Enumeration for Project Types.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTypes.MegaBoard_v1">
+            <summary>
+            Project type for the Megaboard v1.0
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTypes.ATMega128_Project">
+            <summary>
+            Project type for generic Atmega128 projects
+            </summary>
+        </member>
+        <member name="T:MegaIDE.GCCVersions">
+            <summary>
+            Enumeration for GCC Versions
+            </summary>
+        </member>
+        <member name="F:MegaIDE.GCCVersions.Jan_22_2007">
+            <summary>
+            22nd Jan 2007 Release
+            </summary>
+        </member>
+        <member name="F:MegaIDE.GCCVersions.April_04_2005">
+            <summary>
+            4th April 2005 Release
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ProjectTreeItemTypes">
+            <summary>
+            Enumeration for Project Tree item types.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.ProjectType">
+            <summary>
+            Node repesents project type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.ProjectName">
+            <summary>
+            Node represents project name.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.Library">
+            <summary>
+            Node represents the libraries list.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.LibraryItem">
+            <summary>
+            Node represents a library item.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.Directory">
+            <summary>
+            Node represents a directory
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectTreeItemTypes.File">
+            <summary>
+            Node represents a file
+            </summary>
+        </member>
+        <member name="T:MegaIDE.MCUTypes">
+            <summary>
+            Enumeration for microcontroller types
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA128">
+            <summary>
+            Atmega128 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA103">
+            <summary>
+            Atmega103 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA64">
+            <summary>
+            Atmega64 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA32">
+            <summary>
+            Atmega32 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA16">
+            <summary>
+            Atmega16 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA161">
+            <summary>
+            Atmega161 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA162">
+            <summary>
+            Atmega162 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA169">
+            <summary>
+            Atmega169 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA8">
+            <summary>
+            Atmega8 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA8515">
+            <summary>
+            ATMEGA8515 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATMEGA8535">
+            <summary>
+            ATMEGA8535 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATtiny15">
+            <summary>
+            ATtiny15 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATtiny12">
+            <summary>
+            ATtiny12 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.ATTINY26">
+            <summary>
+            ATTINY26 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S8535">
+            <summary>
+            AT90S8535 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S8515">
+            <summary>
+            AT90S8515 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S4434">
+            <summary>
+            AT90S4434 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S4433">
+            <summary>
+            AT90S4433 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S2343">
+            <summary>
+            AT90S2343 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S2333">
+            <summary>
+            AT90S2333 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S2313">
+            <summary>
+            AT90S2313 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S4414">
+            <summary>
+            AT90S4414 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90S1200">
+            <summary>
+            AT90S1200 microcontroller.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90CAN32">
+            <summary>
+            AT90CAN32 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90CAN64">
+            <summary>
+            AT90CAN64 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90CAN128">
+            <summary>
+            AT90CAN128 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90PWM2">
+            <summary>
+            AT90PWM2 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90PWM3">
+            <summary>
+            AT90PWM3 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90USB646">
+            <summary>
+            AT90USB646 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90USB647">
+            <summary>
+            AT90USB647 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90USB1286">
+            <summary>
+            AT90USB1286 Microcontroller 
+            </summary>
+        </member>
+        <member name="F:MegaIDE.MCUTypes.AT90USB1287">
+            <summary>
+            AT90USB1287 Microcontroller 
+            </summary>
+        </member>
+        <member name="T:MegaIDE.CompilerOptimizationFlags">
+            <summary>
+            Enumeration for compiler optimization types.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.CompilerOptimizationFlags.None">
+            <summary>
+            No Optimization.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.CompilerOptimizationFlags.Level1">
+            <summary>
+            Level 1 Optimization.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.CompilerOptimizationFlags.Level2">
+            <summary>
+            Level 2 Optimization.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.CompilerOptimizationFlags.Level3">
+            <summary>
+            Level 3 Optimization.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.CompilerOptimizationFlags.Size">
+            <summary>
+            Optimize for size.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.LibTypes">
+            <summary>
+            Enumeration for math library types.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.LibTypes.Minimal">
+            <summary>
+            No floating point and reduced functionality. Takes least code size.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.LibTypes.Standard">
+            <summary>
+            No floating point. Take more code size than minimal.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.LibTypes.FloatingPoint">
+            <summary>
+            Full floating point scanf and printf library.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.OutputTypes">
+            <summary>
+            Enumeration for math library types.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.OutputTypes.IntelHex">
+            <summary>
+            Intel hex file format.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.OutputTypes.SREC">
+            <summary>
+            SREC Format.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.OutputTypes.Binary">
+            <summary>
+            Binary Format.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.SignedTypes">
+            <summary>
+            Enumerations for signed type for bitfields and char.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.SignedTypes.Unsigned">
+            <summary>
+            Treated as unsigned.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.SignedTypes.Signed">
+            <summary>
+            Treated as signed.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ProjectOptions">
+            <summary>
+            Class to store all the compiler options for the projects.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.allowCrysFreqChange">
+            <summary>
+            Allows or Disallows the modification of crystal frequency.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.allowMCUChange">
+            <summary>
+            Allows or Disallows the modification of MCU type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.allowLibTypeChange">
+            <summary>
+            Allows or Disallows the modification of math library type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.allowOutputTypeChange">
+            <summary>
+            To let output property be changed.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.allowLinkMathLibChange">
+            <summary>
+            To let -lm option be included.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.compilerFlags">
+            <summary>
+            Compiler flags as additional command line arguemts.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.gccVersion">
+            <summary>
+            GCC Version Type
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.optimizationFlags">
+            <summary>
+            Compiler Optimization Flags.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.charProperty">
+            <summary>
+            To set whether char signed or unsigned.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.bitFieldsProperty">
+            <summary>
+            To set whether bitfields signed or unsigned.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.mcu">
+            <summary>
+            MCU type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.crystalFrequency">
+            <summary>
+            Crystal Frequency in Hz.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.projectType">
+            <summary>
+            Type of the project.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.linkerFlags">
+            <summary>
+            Linker flags.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.linkMathLibrary">
+            <summary>
+            Whether to link math library or not.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.scanfLibraryType">
+            <summary>
+            Scanf library type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.printfLibraryType">
+            <summary>
+            Printf library type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.objCopyArguments">
+            <summary>
+            Additional Obj Copy Arguments
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.outputFolder">
+            <summary>
+            Output folder.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.programmingPort">
+            <summary>
+            Comm port.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.outputType">
+            <summary>
+            Sets the output type.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.generateListFile">
+            <summary>
+            Whether to generate list file or not.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ProjectOptions.generateMapFile">
+            <summary>
+            Whether to generate map file or not.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.AllowMathLibChange">
+            <summary>
+            Gets or Sets the allowLinkMathLibChange.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.AllowCrysFreqChange">
+            <summary>
+            Gets or Sets the allowCrysFreqChange.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.AllowLibTypeChange">
+            <summary>
+            Gets or Sets the allowLibTypeChange.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.AllowMCUChange">
+            <summary>
+            Gets or Sets the allowMCUChange.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.AllowOutputTypeChange">
+            <summary>
+            Gets or Sets the allowOutputChange.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.GCC_Version">
+            <summary>
+            Gets or Sets the compiler flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.CompilerFlags">
+            <summary>
+            Gets or Sets the compiler flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.OptimizationFlags">
+            <summary>
+            Gets or Sets the compiler optimization flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.CharProperty">
+            <summary>
+            Gets or Sets the compiler optimization flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.BitFieldsProperty">
+            <summary>
+            Gets or Sets the compiler optimization flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.LinkerFlags">
+            <summary>
+            Gets or Sets the linker flags.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.ScanfLibraryType">
+            <summary>
+            Gets or Sets the scanf library type.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.PrintfLibraryType">
+            <summary>
+            Gets or Sets the printf library type.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.LinkMathLibrary">
+            <summary>
+            Gets or Sets the Link Library type.
+            </summary>
+            
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.ObjCopyArguments">
+            <summary>
+            Gets or Sets the additonal arguments for OBJCOPY.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.OutputFolder">
+            <summary>
+            Gets or Sets the generate list file option.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.GenerateListFile">
+            <summary>
+            Gets or Sets the generate list file option.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.GenerateMapFile">
+            <summary>
+            Gets or Sets the generate map
+             file option.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.ProgrammingPort">
+            <summary>
+            Gets or Sets the generate list file option.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.OutputType">
+            <summary>
+            Gets or Sets the outputTypel
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.ProjectType">
+            <summary>
+            Gets or Sets the project type.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.MCU">
+            <summary>
+            Gets or Sets the MCU type.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectOptions.CrystalFrequency">
+            <summary>
+            Gets or Sets the crystal frequency in Hz.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ProjectManagerClass">
+            <summary>
+            Implemens the project functionality and project options dialog.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.GetSelectedObject(System.Int32)">
+            <summary>
+            Returns an object from the libList.
+            </summary>
+            <param name="index">
+            Index number.
+            </param>
+            <returns>
+            Object with the selected index.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.#ctor">
+            <summary>
+            Contructor for this class
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.ShowOptionsDialog">
+            <summary>
+            Shows "Project Options" dialog box.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.AddListItems">
+            <summary>
+            Move list items from available to selected.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.RemoveListItems">
+            <summary>
+            Remove list items from selected to the available items list.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.libraryOptions_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the message box below the library lists.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.AddFileToProject(System.String,System.Windows.Forms.TreeNode)">
+            <summary>
+            Adds a file to the current project.
+            </summary>
+            <param name="fullFileName">
+            Full filename of the selected file.
+            </param>
+            <param name="selectedNode"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.AddNewFileToProject(System.String,System.Windows.Forms.TreeNode)">
+            <summary>
+            Adds a new file to the current project.
+            </summary>
+            <param name="fullFileName">
+            Full filename of the selected file.
+            </param>
+            <param name="selectedNode"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.GetAbsolutePath(System.Windows.Forms.TreeNode)">
+            <summary>
+            Returns the full path of a node in the project folder.
+            </summary>
+            <param name="selectedNode">
+            Selected node.
+            </param>
+            <returns>
+            String containing the fullpath.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.GetFileNode(System.String)">
+            <summary>
+            Returns a treenode from a file path.
+            </summary>
+            <param name="fileName">
+            Fill path of the filename
+            </param>
+            <returns>
+            Treenode from the project tree(null is file is not in the project).
+            </returns>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.NewProject">
+            <summary>
+            Creates a new project.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.OpenProject(System.String)">
+            <summary>
+            Opens a project from a project file.
+            </summary>
+            <param name="fileName">
+            Path of the project file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.SaveProject">
+            <summary>
+            Saves the currently opened project
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.CloseProject">
+            <summary>
+            Closes the currently opened project.
+            </summary>
+            <returns>
+            Returns false if the closing is cancelled else returns true.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.CheckMissingFiles(System.Windows.Forms.TreeNode,System.Collections.ArrayList,System.Collections.ArrayList)">
+            <summary>
+            Checks missing files in a project.
+            </summary>
+            <param name="startingNode">
+            Starting node to search in.
+             </param>
+            <param name="missingFilesList">
+            Files list containing references to be removed.
+            </param>
+            <param name="missingNodesList">
+            Nodes list containing nodes to be removed.
+            </param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.BuildProject">
+            <summary>
+            Builds the currently open project.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.ProgramDevice">
+            <summary>
+            Programs the device.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.SimulateProgram">
+            <summary>
+            Starts the AVR Studio with the current project's elf file in simulation mode.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.ResetDevice">
+            <summary>
+            Resets the target Board
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.projectFilesTree_AfterLabelEdit(System.Object,System.Windows.Forms.NodeLabelEditEventArgs)">
+            <summary>
+            Called after a project tree's node is renamed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.fileSystemWatcher_Deleted(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            Called when a file is deleted from the project folder.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.fileSystemWatcher_Renamed(System.Object,System.IO.RenamedEventArgs)">
+            <summary>
+            Called when a file is renamed in the project folder.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.menuAddNewFile_Click(System.Object,System.EventArgs)">
+            <summary>
+            Adds a new file to the project.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.ProjectManagerClass.menuAddNewFolder_Click(System.Object,System.EventArgs)">
+            <summary>
+            Adds a new folder to the project.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:MegaIDE.ProjectManagerClass.ProjectManager">
+            <summary>
+            Singleton implementation variable
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectManagerClass.IsProjectModified">
+            <summary>
+            Gets or Sets if the project is modified.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectManagerClass.ProjectFileName">
+            <summary>
+            Gets the currently opened project file name.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectManagerClass.ProjectFolder">
+            <summary>
+            Gets the currently opened project folder path.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ProjectManagerClass.GCCPath">
+            <summary>
+            Path for GCC compiler
+            </summary>
+        </member>
+        <member name="T:MegaIDE.StringDelegate">
+            <summary>
+            Delegate to invoke tab closer from file system watcher event.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ExitDialogClass">
+            <summary>
+            ExitSaveDialog Class : Form which shows list of all unsaved files when closing the MegaIDE or a project.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ExitDialogClass.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.#ctor">
+            <summary>
+            ExitDialogClass contructor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.ShowSaveDialog(System.Windows.Forms.IWin32Window,System.Collections.ArrayList)">
+            <summary>
+            Shows save dialog showing unsaved items when MegaIDE is closed.
+            </summary>
+            <param name="parent">
+            Parent form.
+            </param>
+            <param name="unsavedFilesList">
+            Arraylist containing the paths of the unsaved files.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.ShowMissingFilesDialog(System.Windows.Forms.IWin32Window,System.Collections.ArrayList)">
+            <summary>
+            Shows missing files when a project is opened.
+            </summary>
+            <param name="parent">
+            Parent form.
+            </param>
+            <param name="fileListArray">
+            Arraylist containing the paths of the missing files.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.RestoreSettings">
+            <summary>
+            Restores the default foem look.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ExitDialogClass.ExitDialog">
+            <summary>
+            Singleton implementation property.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ExitDialogClass.SelectedItems">
+            <summary>
+            Returns items selected for saving.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ExitDialogClass.SaveFileTypes">
+            <summary>
+            Enumeration for the item type in the unsaved files list.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ExitDialogClass.SaveFileTypes.File">
+            <summary>
+            Marks the list entry for a code file.
+            </summary>
+        </member>
+        <member name="F:MegaIDE.ExitDialogClass.SaveFileTypes.ProjectFile">
+            <summary>
+            Marks the list entry for a project file.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.ExitDialogClass.ListItem">
+            <summary>
+            Class type for items in the unsaved files list containing file path and item type. 
+            </summary>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.ListItem.#ctor(System.String,MegaIDE.ExitDialogClass.SaveFileTypes)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="fileName">Full File Name</param>
+            <param name="saveFileType">Item Type</param>
+        </member>
+        <member name="M:MegaIDE.ExitDialogClass.ListItem.ToString">
+            <summary>
+            ToString method.
+            </summary>
+            <returns>
+            File name which the current list item represents.
+            </returns>
+        </member>
+        <member name="P:MegaIDE.ExitDialogClass.ListItem.SaveFileType">
+            <summary>
+            Gets the file type entry for the list item.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.ExitDialogClass.ListItem.FileName">
+            <summary>
+            Gets the file path of the list item.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.RecentDocuments">
+            <summary>
+            Class containing static methods to save recently opened documents list either in a file or registry .
+            </summary>
+            
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.LoadListFromFile(System.String)">
+            <summary>
+            Load the recently opened documents list from the file specified.
+            </summary>
+            <param name="fileName">
+            Path of the file to load lists from.
+            </param>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.SaveListToFile(System.String)">
+            <summary>
+            Saves recently opened documents list to the file specified.
+            </summary>
+            <param name="fileName">
+            Path of the file to save lists to.
+            </param>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.LoadListFromRegistry">
+            <summary>
+            Load the recently opened files and projects list from the registry (from "HKEY_LOCAL_MACHINE\SOFTWARE\RoboAntz Labs\MegaIDE\Recent Documents").
+            </summary>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.SaveListToRegistry">
+            <summary>
+            Saves the recently opened documents list in the registry (at "HKEY_LOCAL_MACHINE\SOFTWARE\RoboAntz Labs\MegaIDE\Recent Documents").
+            </summary>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.AddToRecentFiles(System.String)">
+            <summary>
+            Adds a file path to the recent files list.
+            </summary> 
+            <param name="fileName">
+            Path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.RemoveFromRecentFiles(System.String)">
+            <summary>
+            Removes a file path from the recent files list.
+            </summary>
+            <param name="fileName">
+            Path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.AddToRecentProjects(System.String)">
+            <summary>
+            Adds a project file path to the recent projects list.
+            </summary>
+            <param name="projectName">
+            Path of the project file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.RecentDocuments.RemoveFromRecentProjects(System.String)">
+            <summary>
+            Removes a project file path from the recent projects list.
+            </summary>
+            <param name="projectName">
+            Path of the project file.
+            </param>
+        </member>
+        <member name="P:MegaIDE.RecentDocuments.UseRegistry">
+            <summary>
+            Gets or Sets whether to use registry for saving files list.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.RecentDocuments.RecentProjectsList">
+            <summary>
+            Gets the recently opened projects list.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.RecentDocuments.RecentFilesList">
+            <summary>
+            Gets the recently opened files list. 
+            </summary>
+        </member>
+        <member name="T:MegaIDE.MainFormClass">
+            <summary>
+            MainForm Class . Contains the IDE code and the file functions(e.g. Open,Close,Save etc) . Links with the ProjectManager Class for complete implementation.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.ApplySyntaxSettings">
+            <summary>
+            Applies the syntax settings to all the open pages.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.GotoFileLine(System.String,System.Int32)">
+            <summary>
+            Moves the cursor to particular line in specified file. Reviewed . To be changed after next version.
+            </summary>
+            <param name="fileName">
+            Path of the file.
+            </param>
+            <param name="lineNumber">
+            Line Number to go to.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.OpenFile(System.String)">
+            <summary>
+            Creates a new tab displaying the text content of the specified file.
+            </summary>
+            <param name="fileName">
+            Path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.CloseOpenTab(System.String)">
+            <summary>
+            Closes an open tab for a particular file.
+            </summary>
+            <param name="fileName">
+            Full path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.CloseOpenTabs(System.String)">
+            <summary>
+            Closes open tabs with files starting with a particular path(e.g folder).
+            </summary>
+            <param name="path">
+            Path of the folder.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.SaveProjectFiles">
+            <summary>
+            Saves all the project files if the project is open.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.CloseProjectFiles">
+            <summary>
+            Closes all the tabs which have project files opened.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.GetUnsavedProjectFiles">
+            <summary>
+            Gets for the tabs a list of unsaved project files.
+            </summary>
+            <returns>
+            Arraylist containing the path of the unsaved files.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.GetUnsavedFiles">
+            <summary>
+            Returns a list of all unsaved files currently opened.
+            </summary>
+            <returns>
+            Arraylist containing the paths of the unsaved files.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.GetOpenProjectFilesList">
+            <summary>
+            Returns all the currently opened project files.
+            </summary>
+            <returns>
+            Arraylist containing the relative paths of the opened project files.
+            </returns>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.OpenFiles(System.Collections.ArrayList)">
+            <summary>
+            Opens multiple files as specified.
+            </summary>
+            <param name="filesList">
+            List of file paths to be opened.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.OpenProjectFiles(System.String,System.Collections.ArrayList)">
+            <summary>
+            Opens multiple project files as specified.
+            </summary>
+            <param name="projectFolder">
+            Project folder path.
+            </param>
+            <param name="filesList">
+            Relative paths of files in the project.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.RenameTab(System.String,System.String)">
+            <summary>
+            Renames an open tab .
+            </summary>
+            <param name="oldFileName">
+            Path containing old file name.
+            </param>
+            <param name="newFileName">
+            Path containing the new file name.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.SaveFile(System.String)">
+            <summary>
+            Saves an opened file.
+            </summary>
+            <param name="fileName">
+            Path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.SaveFileAs(System.String)">
+            <summary>
+            Shows the Save File As dialog and saves the file.
+            </summary>
+            <param name="fileName">
+            Path of the file.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.SaveFile(NETXP.Controls.Docking.TabPage)">
+            <summary>
+            Saves the file opened by a specified tab page.
+            </summary>
+            <param name="selectedTabPage">
+            Tabpage selected.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.SaveFileAs(NETXP.Controls.Docking.TabPage)">
+            <summary>
+            Shows the Save file As dialog before saving the file opened by the specified tab page.
+            </summary>
+            <param name="selectedTabPage">
+            Tabpage selected.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.#ctor(System.String)">
+            <summary>
+            Constructor with parameters
+            </summary>
+            <param name="fileName">
+            File to open
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.LoadSettings(System.Object)">
+            <summary>
+            Load the settings from the saved files.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.FormLoad">
+            <summary>
+            Loads dock objects, initializes the project tree and loads some other variables.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.ResetLayout">
+            <summary>
+            Resets the dock layout,the toolbar and global syntax settings.
+            </summary>	
+        </member>
+        <member name="M:MegaIDE.MainFormClass.ResetEditorSettings">
+            <summary>
+            Resets the editor settings.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.UpdateRecentDocumentsList">
+            <summary>
+            Updates Recent Documents List
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.ClearLibraries">
+            <summary>
+            Clears the libraries in toolbox, property grid and propertiescombobox.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.PopulateLibraries(System.Collections.ArrayList)">
+            <summary>
+            Populates the toolbox, property grid and propertiescombobox. Reviewed . To be changed after next version. To include C source code parser.
+            </summary>
+            <param name="libList">
+            
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.BringProjectTreeToFront">
+            <summary>
+            Brings project tree dock to front. Causing exceptions right now bcoz the dock loader
+            on a different thread.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.fileOpenProject_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for open project from file menu. Public bcoz also accessed from ProjectManager Class.
+            </summary>
+            <param name="sender">
+            Sender object.
+            </param>
+            <param name="e">
+            Event arguments.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.projectAddExistingFile_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for add existing file. Shows dialog box and adds files.
+            </summary>
+            <param name="sender">
+            Sender object.
+            </param>
+            <param name="e">
+            Event argument.
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.toolsEditorOptions_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows syntax options dialog.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.toolsResetEditorSettings_Click(System.Object,System.EventArgs)">
+            <summary>
+            Resets the editor settings.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.syntaxEdit_SourceStateChanged(System.Object,QWEditor.NotifyEventArgs)">
+            <summary>
+            Called when text in the currently opened page changes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.MainForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Checks for unsaved files. Shows the exit dialog.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.MainForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Memory conservation trick.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.BeginSimulation">
+            <summary>
+            Called just before the simulation process starts.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.EndSimulation(System.Boolean)">
+            <summary>
+            Called after the simulation process has been started or terminated.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.BeginProgramming">
+            <summary>
+            Method to be called just before programming.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.EndProgramming">
+            <summary>
+            Method to be called just after programming.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.BeginBuilding">
+            <summary>
+            Disables the build command buttons.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.EndBuilding(System.Int32)">
+            <summary>
+            Called after building the project to re enable buttons and menus.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.errorList_ItemActivate(System.Object,System.EventArgs)">
+            <summary>
+            Parses the listitem clicked in error list and opens file and goes to specified line.
+            </summary>
+            <param name="sender">
+            Sender object.
+            </param>
+            <param name="e">
+            Event Arguments
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.outputWindow_LinkClicked(System.Object,System.Windows.Forms.LinkClickedEventArgs)">
+            <summary>
+            Parses the link clicked in output window and opens file and goes to specified line.
+            </summary>
+            <param name="sender">
+            Sender object.
+            </param>
+            <param name="e">
+            Event Arguments
+            </param>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.Main(System.String[])">
+            <summary>
+            The main entry point for the application. Starts MegaIDE with or without command line arguments.
+            </summary>
+        </member>
+        <member name="M:MegaIDE.MainFormClass.syntaxEdit_NeedCodeCompletion(System.Object,QWEditor.CodeCompletionArgs)">
+            <summary>
+            Autocompletion code. Will need changes with newer version of syntax edit.  Reviewed . To be changed after next version.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.MainForm">
+            <summary>
+            Gets the singleton form variable.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.MainFormInitializer">
+            <summary>
+            Sets the singleton form variable.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.Errors">
+            <summary>
+            Sets the errors count in the status bar. Reviewed . To be changed after next version.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.Warnings">
+            <summary>
+            Sets the warnings count in the status bar. Reviewed . To be changed after next version.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.PercentDone">
+            <summary>
+            Gets or Sets the 
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.AppDirectory">
+            <summary>
+            Gets the application directory path.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.ProjectFilesTree">
+            <summary>
+            Gets the treeview control associated with project tree.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.ErrorList">
+            <summary>
+            Gets the error list listview control.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.OutputWindow">
+            <summary>
+            Gets the output window RichTextBox.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.IsProjectOpen">
+            <summary>
+            Gets or Sets the isProject open bool variable.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.ShowErrors">
+            <summary>
+            Gets or Sets the property to display errors in Error List.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.ShowWarnings">
+            <summary>
+            Gets the property to display warnings in Error List.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.MainFormClass.TempErrorList">
+            <summary>
+            Stores the temporary objects of the errorList.
+            </summary>
+        </member>
+        <member name="T:MegaIDE.Templates">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.Templates.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.Templates.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MegaIDE.Templates.New_Project_C_File">
+             <summary>
+               Looks up a localized string similar to #include&lt;RAL/megaboard.h&gt;
+            void main()
+            {
+             //Write here
+             while(1); //do not remove this line
+            }.
+             </summary>
+        </member>
+    </members>
+</doc>
